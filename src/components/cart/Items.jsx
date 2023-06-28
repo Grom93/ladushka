@@ -31,12 +31,8 @@ const Items = (props) => {
       }
 
   return (
-    <div className='container'>
-      <main>
-        <div className='row row-cols-1 justify-content-evenly row-cols-md-3 row-cols-sm-2 text-center'>
-          <div className="col px-3 py-3">
-            <div className='card md-6 rounded'>
-              <div className='card-header py-2 px-3'>
+    
+              <div>
 
                 {
                   context.isFav(props.myId) == true ?
@@ -66,11 +62,7 @@ const Items = (props) => {
               
               
               </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+            
   )
 }
 

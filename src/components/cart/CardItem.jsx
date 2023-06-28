@@ -48,7 +48,12 @@ const CardItem = (props) => {
   };
 
   return (
-    <div>
+    <div className="container">
+      <div className='row row-cols-4 justify-content-evenly row-cols-md-3 row-cols-sm-2 text-center'>
+      <div className="col px-3 py-3">
+      <div className='card md-6 rounded'>
+        <div  className='card-header py-2 px-3'>
+      
       {props.item.map((obj) => {
         return (
           <Items
@@ -68,6 +73,10 @@ const CardItem = (props) => {
           />
         );
       })}
+      </div>
+      </div>
+    </div>
+    </div>
     </div>
   );
 };

@@ -3,14 +3,14 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import "./App.css"
-import { useState, useEffect } from "react";
 import axios from "axios";
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom";
 import Favorites from "./components/favorites/Favorites";
 import Form from "./components/Form";
 import Basket from "./components/basket/Basket";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Description from "./components/Description";
+
 
 export const AppContext = React.createContext({})
 
@@ -20,6 +20,8 @@ function App() {
 const [product, setProduct] = useState( [] )
 const [favorites, setFavorites] = useState( [] )
 const [overlayItems, setOverlayItems] = useState([])
+const [show, setShow] = useState(false)
+
 
 useEffect (()=>{
   async function axiosData(){
@@ -56,9 +58,13 @@ const isAdded=(myId) => {
 const isFav=(myId) => {
   return favorites.some((objIsFav)=> objIsFav.myId === myId)
 }
+
+const handleClose = () => setShow(false)
+const handleShow = () => setShow(true);
   
 
   return (
+    
 
     <AppContext.Provider
     value={
@@ -70,14 +76,24 @@ const isFav=(myId) => {
       setFavorites,
       setOverlayItems,
       isFav,
-      isAdded
+      isAdded,
+      show,
+      setShow,
+      handleShow,
+      handleClose
+
       
     }
     }>
     <div>
 
       <Router>
-    <Header></Header>
+    <Header
+    show={show}
+    setShow={setShow}
+    handleClose ={handleClose }
+    handleShow ={handleShow }
+    />
     <Routes>
     <Route path="/favorites"
       element={

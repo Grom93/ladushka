@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import {AppContext} from '../../App'
 import Items from './Items'
+import { Helmet } from 'react-helmet'
 
 const Favorites = (props) => {
 
@@ -20,9 +21,15 @@ const Favorites = (props) => {
 
 
   return (
+    
     <div>
+      <Helmet>
+      <title>Ладушка</title>
+      <meta name="description" content="Главная"/>
+      <link rel="canonical" href="http://localhost:3000/favorites" />
+      </Helmet>
       <div>
-        <h1 className='col-md-8 offset-md-2'>Избранные туры</h1>
+        <h1 className='col-md-8 offset-md-2'>Избранные товары</h1>
       </div>
     <div>
       {
