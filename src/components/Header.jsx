@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { Container, Nav, Navbar, Button, Modal, ModalTitle, Form } from 'react-bootstrap';
+import React from 'react'
+import { Container, Nav, Navbar, Button, Modal, Form } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import "../App.css"
 import { AppContext } from '../App';
@@ -39,14 +39,17 @@ const Header = () => {
             <Form.Group controlId="fromBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Введите email"/>
+              <Form.Text className='text-muted'></Form.Text>
             </Form.Group>
 
             <Form.Group controlId="fromBasicPassword">
               <Form.Label>Пароль</Form.Label>
               <Form.Control type="password" placeholder="Введите пароль"/>
+              <Form.Text className='text-muted'></Form.Text>
+
             </Form.Group>
 
-            <Form.Group controlId="fromBasicPassword">
+            <Form.Group controlId="fromBasicCheck">
               <Form.Check type="checkbox" label="Remember me"/>
             </Form.Group>
 
