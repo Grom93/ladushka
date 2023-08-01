@@ -4,11 +4,11 @@ import ItemsBasket from './ItemBasket'
 const Basket = (props) => {
   return (
     <div>
-      <div>
+      <div className='row row-cols-1   text-center d-flex justify-content-center'>
         {
           props.overlayProp.length>0?
         
-        <div>
+          <div >
           {
             props.overlayProp.map(obj =>{
               return(
@@ -28,8 +28,8 @@ const Basket = (props) => {
         :
         <h1 className='col-md-8 offset-md-2'>Корзина пуста</h1>
         }
-        <div className='row'>
-          <div className='col-md-8 offset-md-2'>
+        
+          <div className='col-md-2 offset-md-2'>
             <p>Итог</p>
             <p>{props.totalPrice}</p>
             <button type="button" className='w-10 btn-lg btn-primary'>Оформить</button>
@@ -38,7 +38,7 @@ const Basket = (props) => {
         </div>
       
       </div>
-    </div>
+    
   )
 }
 

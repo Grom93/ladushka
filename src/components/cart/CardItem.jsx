@@ -1,6 +1,7 @@
 import React from "react";
 import Items from "./Items";
 import axios from "axios";
+import { Row, Col } from 'react-bootstrap';
 
 const CardItem = (props) => {
   const onAddOverlay = async (obj) => {
@@ -11,7 +12,7 @@ const CardItem = (props) => {
       if (findOverlay) {
         axios.delete(
           `https://649063631e6aa71680cb2a6f.mockapi.io/cart/${findOverlay.id}`
-        );
+        ); 
         props.setOverlayItems((over) =>
           over.filter((o) => o.myId !== obj.myId)
         );
@@ -47,14 +48,17 @@ const CardItem = (props) => {
     }
   };
 
+
+ 
+
   return (
     <div className="container">
-      <div className='row row-cols-4 justify-content-evenly row-cols-md-3 row-cols-sm-2 text-center'>
+      <Row justify-content="center" className='row-cols-4 justify-content-evenly row-cols-md-3 row-cols-sm-2 row-cols-xs-1 text-center'>
       
       
       {props.item.map((obj) => {
         return (
-          <div className="col px-3 py-3">
+          <Col className="col px-3 py-3">
       
         
           <Items
@@ -74,10 +78,10 @@ const CardItem = (props) => {
           />
           
     
-    </div>
+    </Col>
         );
       })}
-      </div>
+      </Row>
       </div>
     
   );

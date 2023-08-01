@@ -13,7 +13,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark">
         <Container>
           
-          <Navbar.Brand><Link to={'/'}>Ладушка</Link></Navbar.Brand>
+          <Navbar.Brand><Link to={'/'}><img src='/img/logos.png' height={'50px'} width={'50px'} style={{marginRight: 5 }}></img>адушка</Link></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link><Link to={'/'}>главное</Link></Nav.Link>
             <Nav.Link><Link to={'/favorites'}>избранное</Link></Nav.Link>
@@ -21,7 +21,7 @@ const Header = () => {
             <Nav.Link><Link to={'/description'}>описание</Link></Nav.Link>
           </Nav>
           <Nav>
-            <Button variant="primary" onClick={context.handleShow }>
+            <Button variant="primary" onClick={context.handleShow } style={{marginRight: 5 }}>
             Войти
               </Button >
               <Button variant="primary" onClick={context.handleShow }>

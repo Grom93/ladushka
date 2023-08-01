@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {AppContext} from "../../App"
 import {VKShareButton, VKIcon, WhatsappShareButton, WhatsappIcon, OKShareButton, OKIcon, TelegramIcon, TelegramShareButton} from "react-share"
+import { Link } from 'react-router-dom'
 
 const Items = (props) => {
 
@@ -48,16 +49,16 @@ const Items = (props) => {
                   Добавить в избранное
                 </button>
                 }
-
-                <p>{props.title}</p>
-                <img className="rounded" src={props.img} width={'85%'} ></img>
-                <p>Описание<br/>{props.descriptions}</p>
+                
+                <Link to={`/productInfo/`} style={{color:'black'}}><h6 style={{marginTop:10, marginBottom:10}}>{props.title}</h6></Link>
+                <img className="rounded" src={props.img} width={'85%'} height={'300px'} ></img>
+                <p>Описание<br/>{props.descriptions.length > 33 ? props.descriptions.substring(0, 33) + '...' : props.descriptions}</p>
                 <p>Цена: {props.price}</p>
 
                 
                 <button type="button" className="w-100 btn btn-lg btn-primary"
                 onClick={onClickAdd}>{context.isAdded(props.myId)?
-                <img width={15}
+                <img width={15} 
               src={context.isAdded(props.myId)? '/img/icon.png': ''}
             alt=""/>: "Добавить в корзину"}</button>
 

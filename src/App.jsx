@@ -9,7 +9,8 @@ import Favorites from "./components/favorites/Favorites";
 import Form from "./components/Form";
 import Basket from "./components/basket/Basket";
 import React, { useState, useEffect } from "react";
-import Description from "./components/Description";
+import Description from "./components/description/Description";
+import {ProductInfo} from  "./components/cart/ProductInfo";
 
 
 export const AppContext = React.createContext({})
@@ -94,6 +95,7 @@ const handleShow = () => setShow(true);
     handleClose ={handleClose }
     handleShow ={handleShow }
     />
+    
     <Routes>
     <Route path="/favorites"
       element={
@@ -117,6 +119,11 @@ const handleShow = () => setShow(true);
         />
       }/>
 
+      <Route path="/productInfo/:id"
+          element={
+        <ProductInfo/>
+      }/>
+
       <Route path="/form"
       element={
         <Form/>
@@ -138,6 +145,8 @@ const handleShow = () => setShow(true);
       element={
         <Description/>
       }/>
+
+        
       
         
     
@@ -147,6 +156,8 @@ const handleShow = () => setShow(true);
     </div>
 
     </AppContext.Provider>
+    
+    
      
   );
 }

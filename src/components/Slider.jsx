@@ -6,12 +6,12 @@ import { Button } from 'react-bootstrap';
 const Slider = () => {
   return (
     <Carousel slide={false}>
-      <Carousel.Item style={{height: '500px'}}>
+      <Carousel.Item style={{height: '800px'}}>
         <img 
           className="d-block w-100 "
-          src="./img/VvpyXlxmMwM.jpg"
+          src="./img/medved-s-dev.png"
           alt="First slide"
-          style={{height: '500px'}}
+          style={{height: '800px'}}
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -20,12 +20,12 @@ const Slider = () => {
           <Link to="/form"><Button variant='primary'>Обратная связь</Button></Link>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{height: '500px'}}>
+      <Carousel.Item style={{height: '800px'}}>
         <img 
           className="d-block w-100" 
-          src="./img/W3GGQSIenKU.jpg"
+          src="./img/medved-s-dev2.png"
           alt="Second slide"
-          style={{height: '500px'}}
+          style={{height: '800px'}}
         />
 
         <Carousel.Caption>
@@ -33,12 +33,12 @@ const Slider = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{height: '500px'}}>
+      <Carousel.Item style={{height: '800px'}}>
         <img 
           className="d-block w-100 "
-          src="./img/x4TF_2fpcJA.jpg"
+          src="./img/medved-s-dev3.png"
           alt="Third slide"
-          style={{height: '500px'}}
+          style={{height: '800px'}}
         />
 
         <Carousel.Caption>

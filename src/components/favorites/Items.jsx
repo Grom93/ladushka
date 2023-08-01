@@ -40,7 +40,7 @@ const Items = (props) => {
                 
 
                 <p>{props.title}</p>
-                <img className="rounded" src={props.img} width={'85%'} ></img>
+                <img className="rounded" src={props.img} width={'85%'} height={'300px'} ></img>
                 <p>Описание<br/>{props.descriptions}</p>
                 <p>Цена: {props.price}</p>
                 <div>

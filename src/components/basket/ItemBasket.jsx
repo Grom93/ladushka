@@ -1,24 +1,34 @@
 import React from 'react'
+import {Col} from 'react-bootstrap'
+
 
 const ItemBasket = (props) => {
   return (
-    <div className='row row-cols-1 justify-content-evenly row-cols-md-3 row-cols-sm-2 text-center'>
+    
           <div className="col px-3 py-3">
             <div className='card md-6 rounded'>
               <div className='card-header py-2 px-3'>
-                <h5>{props.title}</h5>
-                <img className="rounded" src={props.img} width={'50%'} alt='Произошла ошибка'></img>
+                <div className="d-flex align-items-center justify-content-center" >
+              <img className="rounded" src={props.img} width={'10%'} height={'100px'} alt='Произошла ошибка' style={{ marginRight: 20 }}></img>
+              
+                <h5 style={{ marginRight: 20 }}>{props.title}</h5>
+                
                 <h5>
-                  <br/>
-                  <span>{props.price}</span>
+                  
+                  <span style={{ marginRight: 20 }}>Цена: {props.price}</span>
                 </h5>
-                <button type="button" className="w-100 btn btn-lg btn-primary"
-                onClick={()=>props.deleteItems(props.id)}>Удалить из корзины</button>
+                
+                <button type="button" className="w-10 btn btn-lg btn-primary"
+                onClick={()=>props.deleteItems(props.id)} style={{ marginLeft: 20 }}>Удалить из корзины</button>
+                
+                
 
                 </div>
               </div>
             </div>
           </div>
+
+          
         
   )
 }
