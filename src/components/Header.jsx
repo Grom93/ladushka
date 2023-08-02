@@ -18,7 +18,7 @@ const Header = () => {
             <Nav.Link><Link to={'/'}>главное</Link></Nav.Link>
             <Nav.Link><Link to={'/favorites'}>избранное</Link></Nav.Link>
             <Nav.Link><Link to={'/cart'}>корзина</Link></Nav.Link>
-            <Nav.Link><Link to={'/description'}>описание</Link></Nav.Link>
+            <Nav.Link><Link to={'/description'}>С днём рождения!!!</Link></Nav.Link>
           </Nav>
           <Nav>
             <Button variant="primary" onClick={context.handleShow } style={{marginRight: 5 }}>
