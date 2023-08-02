@@ -4,7 +4,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className='container sticky-footer ' >
+    <div className='container sticky-footer ' style={{height:'5px'}}>
       <footer className='footer mt-auto  row row-col-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fixed-bottom.'>
         <div className='col mb-3'>
           <a className=''>
